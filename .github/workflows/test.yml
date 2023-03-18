@@ -26,4 +26,4 @@ jobs:
           path: date
       - name: Read and show
         run: 
-          cat date 
+          echo "hi" 
