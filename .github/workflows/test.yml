@@ -23,7 +23,7 @@ jobs:
       - name: Checkout file
         uses: moonrailgun/branch-filestorage-action@v1.2.2
         with:
-          path: date
+          path: database
       - name: Read and show
         run: 
-          echo "hi" 
+          echo "hi" >> database
