@@ -43,7 +43,7 @@ jobs:
         with:
           path: date
       - name: Before Try
-        run: cat date
+      - run: cat date
       - name: update date
         run: |
           python calc.py ${{ secrets.VAR0 }} ${{ secrets.VAR1 }} "06:00" "06:54" "06:25" "06:36" 0.95 >> date
