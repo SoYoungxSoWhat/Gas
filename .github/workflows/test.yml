@@ -7,23 +7,13 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
-
     steps:
-
-      - uses: actions/checkout@v2
-      
-      # 配置安装 python 环境
-      - uses: actions/setup-python@v2
-        with:
-          python-version: 3.9
-          
-      # 配置安装依赖包
-      - run: pip install -r requirements.txt
-
-      - name: Checkout file
-        uses: moonrailgun/branch-filestorage-action@v1.2.2
-        with:
-          path: database
-      - name: Read and show
-        run: 
-          echo "hi" >> database
+    - uses: actions/checkout@v2
+    - name: Checkout file date
+      uses: moonrailgun/branch-filestorage-action@v1.2.0
+      with:
+        path: date
+    - name: Read and show
+      run: touch date && cat date
+    - name: update date
+      run: echo $(date) > date
