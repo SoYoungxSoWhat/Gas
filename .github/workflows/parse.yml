@@ -37,13 +37,6 @@ jobs:
           
       # 配置安装依赖包
       - run: pip install -r requirements.txt
-
-      - name: prepare_database
-        uses: moonrailgun/branch-filestorage-action@v1.2.2
-        with:
-          path: date
-      - name: calc_fee
-        run: |
-          python calc.py ${{ secrets.VAR0 }} ${{ secrets.VAR1 }} "06:00" "06:54" "06:25" "06:36" 0.95 >> date
-      - name: log
-        run: cat date
+      # Runs a single command using the runners shell
+      - name: Calc
+        run: python fee.py ${{ secrets.VAR0 }} ${{ secrets.VAR1 }} "06:00" "06:54" "06:25" "06:36" 0.95
