@@ -12,8 +12,8 @@ jobs:
     - name: Checkout file date
       uses: moonrailgun/branch-filestorage-action@v1.2.0
       with:
-        path: date
+        path: database
     - name: Read and show
-      run: touch date && cat date
+      run: touch database && cat database
     - name: update date
       run: echo $(date) > date
