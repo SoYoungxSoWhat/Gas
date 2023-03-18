@@ -16,4 +16,4 @@ jobs:
     - name: Read and show
       run: touch database && cat database
     - name: update date
-      run: echo $(date) > database
+      run: echo "hi" > database
