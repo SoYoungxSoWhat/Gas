@@ -39,4 +39,4 @@ jobs:
       - run: pip install -r requirements.txt
       # Runs a single command using the runners shell
       - name: Calc
-        run: python fee.py ${{ secrets.VAR0 }} ${{ secrets.VAR1 }} "06:00" "06:54" "06:25" "06:36" 0.95
+        run: python fee.py ${{ secrets.VAR0 }} ${{ secrets.VAR1 }} "06:00" "06:54" "06:25" "06:36" 5.41
